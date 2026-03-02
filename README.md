@@ -36,7 +36,10 @@ A coordination layer for India's food systems. Organising thousands of diverse i
 
 **Led by** — Lalitha A R (PI), with research assistants working on the IFID 2026 project
 
-**Reach** — Read across 30+ countries, including researchers at Caltech, CSIRO, McGill, and IIT Madras
+**Reach** — Read across 30+ countries, including researchers at Caltech, CSIRO, McGill, and IIT Madras*
+
+*_Reflects independent readership; does not imply institutional endorsement._
+
 
 ---
 
