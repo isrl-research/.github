@@ -1,71 +1,84 @@
 # iSRL — Interdisciplinary Systems Research Lab
 
-> We build neutral, open-source systems designed to meet the reality of human complexity.
+> *Ya Devi Sarva Bhuteshu Buddhi Roopena Samsthita, Namasthasyai Namo Namah* 
+> \- Devi Mahatmiyam[^1]
+> 
+> Salutations to the Goddess who dwells in all beings in the form of intelligence.
 
-iSRL is an independent research lab. We are not affiliated with any university. We pick one focus area per year and go deep — producing open, rigorous, publicly useful work on problems that sit at the intersection of systems, infrastructure, and society.
+The i in iSRL is lowercase on purpose. The work is not about any single person.
+Everyone here serves the same thing.
+
+---
+
+iSRL is an open research lab. We pick one focus area per year, go deep, and 
+publish everything — findings, dead ends, process, questions we couldn't answer. 
+All of it, openly, under CC BY 4.0.
+
+The work sits at the intersection of systems, infrastructure, and society — 
+problems where the gap between how things are organised and how they could be 
+organised has real consequences for real people. We build the substrate that lets 
+other people ask better questions.
 
 ---
 
 ## 2026 Focus — Indian Food Informatics Data (IFID)
 
-A coordination layer for India's food systems. Organising thousands of diverse ingredient expressions into functional categories without erasing regional identity.
+A coordination layer for India's food systems. Thousands of regional ingredient 
+expressions — Mathania red chilli, Kashmiri mirch, lal mirchi powder — mapped to 
+stable, machine-readable identifiers without any one of them being declared the 
+correct name. Brands keep their identity. Regulators get a consistent reference. 
+Researchers get reproducible data.
 
-**Coordination vs Convergence** — Allowing regional naming conventions to coordinate with global systems through a shared identity-preservation layer.
+Coordination without convergence. The standard lives in the infrastructure, not 
+at the surface.
 
-**Non-Adversarial Design** — A balanced framework serving Consumer Safety, Regulatory Efficiency, and Brand Operational Ease simultaneously.
+**Active sprint** → [Allergen Declaration in India — Rules, Reality, and Gaps](https://github.com/isrl-research/sandbox-research/discussions/4)
+
+## Join or Contribute
+
+The entry point is the work. Browse the open research threads — if something 
+catches your eye and you have something real to say, drop in. That is how most 
+people find their way in.
+
+If you are a subject matter expert, a researcher, or someone with domain depth 
+in food systems, regulatory law, nutrition science, data infrastructure, or 
+adjacent fields — the lab engages with advisors and collaborators on specific 
+problems, not as a formality but because the work genuinely needs people who 
+know things we don't. If something in the research threads connects to your 
+domain, that connection is the invitation.
+
+If you are new to research entirely — also welcome. The threads are designed 
+to be legible to someone who has never written a research report. The milestone 
+structure means you are never asked to produce everything at once. You start 
+where you are.
+
+**Active threads** → [sandbox-research discussions](https://github.com/isrl-research/sandbox-research/discussions)
 
 ---
 
 ## Recent Research Artifacts
 
-| Type | Title | Date |
-|------|-------|------|
-| Report | [Indian Supreme Court Defines Hierarchical Classification Framework for Food Products, Overruling Common Parlance Precedents](https://isrl-research.github.io/logs/supreme-court-2026-food-shift.html) | Feb 2026 |
-| Data | [Indian Food Ingredients & Label Variants](https://doi.org/10.34740/kaggle/dsv/14783287) | Feb 2026 |
-| Report | [Encyclopedia of Indian Food Ingredients](https://isrl-research.github.io/logs/ifid-ency.html) | Feb 2026 |
-| Preprint | [Making Accessibility Accessible, Part I: A Care Framework for Developer-Centered Tooling Infrastructure](https://doi.org/10.13140/RG.2.2.19130.25285) | Dec 2025 |
-| Preprint | [Beyond the Human Blueprint: Toward Robomorphic Design in Autonomous Systems](https://doi.org/10.13140/RG.2.2.32588.07049) | Dec 2025 |
+## Research Artifacts — IFID 2026
 
+| Type | Title | DOI |
+|------|-------|-----|
+| Dataset | Indian Food Ingredients & Label Variants | [10.34740/KAGGLE/DSV/14783287](https://doi.org/10.34740/KAGGLE/DSV/14783247) |
+| Book | Encyclopedia of Indian Food Ingredients | [10.5281/zenodo.18650863](https://doi.org/10.5281/zenodo.18650863) |
+| Report | Indian Supreme Court: Hierarchical Classification for Food Products | [10.5281/zenodo.18651646](https://doi.org/10.5281/zenodo.18651646) |
+| Report | Regulatory Delta: FSSAI 2011 vs 2020 Labelling Regulations | [10.5281/zenodo.18719394](https://doi.org/10.5281/zenodo.18719394) |
+| Report | Identity, Transformation and Function: The E-M-F Tri-Axial Model | [10.5281/zenodo.18714527](https://doi.org/10.5281/zenodo.18714527) |
+| Data Paper | Justification Companion to the EMF-Scoring Model | [10.5281/zenodo.18713318](https://doi.org/10.5281/zenodo.18713318) |
+| Methods Note | Regulatory Texts and Case Law as Ground Truth in Emerging Domains | [10.5281/zenodo.18741725](https://doi.org/10.5281/zenodo.18741725) |
+
+[All outputs on Zenodo →](https://zenodo.org/communities/isrl/records)
 [All Research Logs →](https://isrl-research.github.io/logs/)
-
----
-
-## About the Lab
-
-**Structure** — Independent lab · Not university-affiliated · Fully remote, async
-
-**Led by** — Lalitha A R (PI), with research assistants working on the IFID 2026 project
-
-**Reach** — Read across 30+ countries, including researchers at Caltech, CSIRO, McGill, and IIT Madras*
-
-*_Reflects independent readership; does not imply institutional endorsement._
-
 
 ---
 
 ## How We Work
 
-We work asynchronously and fully online. There's no office, no room to commute to, no hours to keep.
+Fully remote, fully async. No office, no fixed hours. What we keep is a deliberate 
+rhythm — every third week completely off, high agency on work weeks, and genuine 
+support through
 
-- **Every third week** — Off. Completely. No check-ins, no updates.
-- **Work weeks** — High agency. No one is managing your hours.
-- **Throughout** — High freedom. Follow your curiosity. Ask uncomfortable questions. Change your mind when the evidence changes.
-
----
-
-## Join the Lab
-
-- [Monetary Support](https://isrl-research.github.io/join-us.html#monetary)
-- [Subject Matter Expert](https://isrl-research.github.io/join-us.html#sme)
-- [Systems Researcher / RA](https://isrl-research.github.io/join-us.html#researcher)
-- [Industry Data Partner](https://isrl-research.github.io/join-us.html#data-partner)
-
----
-
-## Research Notes
-
-Research logs are internal working documents made public. They record process, synthesis, and what didn't work — not just conclusions. All documents are living; they will be updated as understanding is refined. Anyone is invited to engage, critique, or contribute.
-
----
-
-**CC BY 4.0 International** · Data is a permanent public asset · iSRL / Digital Public Infrastructure
+[^1]: That line is an accurate representation of the inherent intelligence we respect in all of the beings. Please know we respect all religions and beliefs. This is not a place for discussion about religion or beliefs.
