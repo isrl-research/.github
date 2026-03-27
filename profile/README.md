@@ -1,3 +1,29 @@
+# A computer once declared Maggi healthier than rice.
+
+## We are an open research lab helping computer understand why the grandma will slap it if it says so and hopefully make it learn Indian Nutrition truth. 
+
+We are process open, not just outputs.
+
+Not a bug. A feature of how food data works — or doesn't. The system had ingredient lists but no way to know what they actually meant. `Maida` and `refined wheat flour` are the same thing. `Kashmiri chilli` is not just a noisy version of `chilli`. String matching cannot tell the difference. Until a system can, nutrition studies run on shaky ground, compliance checks guess, and a regulator cannot ask a clean question and trust the answer.
+
+The coordination layer that makes these questions answerable does not exist for Indian packaged food. Building it is what we are doing.
+
+That work has produced things we did not expect going in.
+
+A classification framework grounded in ITC-HS codes, FSSAI regulations, and Supreme Court rulings — inspired by S.R. Ranganathan's 1933 Colon Classification — that assigns ingredient identity across three axes: energy profile, material composition, and label function. The first deterministic fully backtracable framework that quantifies NOVA processing at the ingredient level, not the product level.
+
+A sampling methodology for what we call fragmented textual spaces — domains where no ground truth exists and the vocabulary itself is part of what you are trying to map. Google Research independently converged on the same structural problem from flood data. The methods note generalises the approach so other domains can use it.
+
+A comparative analysis method — Regulatory Delta Analysis — that reads two versions of a law not as text but as data: what changed, what stayed, what the delta reveals about the constraints the system is working within. Applied so far to FSSAI 2011 vs 2020 and to a century of landmark rulings from Supreme Court that redefined food classification hierarchy.
+
+896 SKUs. 2,291 [^1] unique ingredient variant strings. All of it open under CC BY 4.0, process and dead ends included, on GitHub.
+
+Sponsorship keeps the infrastructure running. We are open, not just in the final outputs being open access - but the process, dead ends, debates and learning, all of it happens in the open in GitHub. 
+
+
+[^1]: After dozens of rounds of cleaning from 18k rows of product data and 48k ingredient strings by naive comma split.
+
+
 # iSRL — Interdisciplinary Systems Research Lab
 
 > *Ya Devi Sarva Bhuteshu Buddhi Roopena Samsthita, Namasthasyai Namo Namah* 
