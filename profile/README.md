@@ -1,6 +1,6 @@
 # A computer once declared Maggi healthier than rice.
 
-## We are an open research lab helping computer understand why the grandma will slap it if it says so and hopefully make it learn Indian Nutrition truth. 
+## We are an open research lab helping computer understand why the grandma will slap it if it says so and hopefully make it learn Indian Nutrition truth.
 
 [![Total Views](https://img.shields.io/badge/Total%20Views-1%2C220-blue?logo=zenodo)](https://zenodo.org/communities/isrl)
 [![Total Downloads](https://img.shields.io/badge/Total%20Downloads-781-green?logo=zenodo)](https://zenodo.org/communities/isrl)
