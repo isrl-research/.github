@@ -100,14 +100,10 @@ jobs:
               downloads_badge = f"https://img.shields.io/badge/Total%20Downloads-{quote(downloads_formatted)}-green?logo=zenodo"
               records_badge = f"https://img.shields.io/badge/Records-{stats['total_records']}-orange?logo=zenodo"
 
-              timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
               markdown = (
-                  f"## iSRL Community Statistics\n"
-                  f"Last updated: {timestamp} UTC\n\n"
                   f"[![Total Views]({views_badge})](https://zenodo.org/communities/{community_id})\n"
                   f"[![Total Downloads]({downloads_badge})](https://zenodo.org/communities/{community_id})\n"
-                  f"[![Total Records]({records_badge})](https://zenodo.org/communities/{community_id})\n\n"
-                  f"**Records with statistics:** {stats['records_with_stats']} / {stats['total_records']}\n"
+                  f"[![Total Records]({records_badge})](https://zenodo.org/communities/{community_id})\n"
               )
               return markdown
 
@@ -125,30 +121,28 @@ jobs:
                   with open(readme_path, 'r') as f:
                       current_readme = f.read()
 
-              # Remove old statistics section if it exists
-              stats_start = current_readme.find("## iSRL Community Statistics")
-              if stats_start != -1:
-                  # Find where this section ends (next ## or end of file)
-                  stats_end = current_readme.find("\n##", stats_start + 1)
-                  if stats_end == -1:
-                      # No section after stats, remove to end
-                      before = current_readme[:stats_start].rstrip()
-                      after = ""
-                  else:
-                      # Section found, keep content after
-                      before = current_readme[:stats_start].rstrip()
-                      after = current_readme[stats_end + 1:]
-              else:
-                  # No existing stats section
-                  before = current_readme
-                  after = ""
+              # Find insertion point: between "## We are an open research lab" and "We are process open"
+              insert_marker = "We are process open"
+              insert_pos = current_readme.find(insert_marker)
 
-              # Build new README with stats at top
-              new_readme = badge_markdown
-              if before:
-                  new_readme += "\n\n" + before
-              if after:
-                  new_readme += "\n" + after
+              if insert_pos != -1:
+                  # Remove any existing badges (they appear as [![...)
+                  before_insert = current_readme[:insert_pos].rstrip()
+
+                  # Remove old badge lines if they exist (lines with [![)
+                  lines = before_insert.split('\n')
+                  filtered_lines = []
+                  for line in lines:
+                      if not line.strip().startswith('[!['):
+                          filtered_lines.append(line)
+
+                  before_insert = '\n'.join(filtered_lines).rstrip()
+                  after_insert = current_readme[insert_pos:]
+
+                  new_readme = before_insert + "\n\n" + badge_markdown + "\n" + after_insert
+              else:
+                  # Fallback: append at end
+                  new_readme = current_readme.rstrip() + "\n\n" + badge_markdown
 
               with open(readme_path, 'w') as f:
                   f.write(new_readme)
