@@ -98,17 +98,17 @@ jobs:
 
               views_badge = f"https://img.shields.io/badge/Total%20Views-{quote(views_formatted)}-blue?logo=zenodo"
               downloads_badge = f"https://img.shields.io/badge/Total%20Downloads-{quote(downloads_formatted)}-green?logo=zenodo"
-              records_badge = f"https://img.shields.io/badge/Records-{stats['total_records']}-orange?logo=zenodo"
+              records_badge = f"https://img.shields.io/badge/Records-{stats['total_record']}-orange?logo=zenodo"
 
-              markdown = f"""## iSRL Community Statistics
-Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} UTC
-
-[![Total Views]({views_badge})](https://zenodo.org/communities/{community_id})
-[![Total Downloads]({downloads_badge})](https://zenodo.org/communities/{community_id})
-[![Total Records]({records_badge})](https://zenodo.org/communities/{community_id})
-
-**Records with statistics:** {stats['records_with_stats']} / {stats['total_records']}
-"""
+              timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+              markdown = (
+                  f"## iSRL Community Statistics\n"
+                  f"Last updated: {timestamp} UTC\n\n"
+                  f"[![Total Views]({views_badge})](https://zenodo.org/communities/{community_id})\n"
+                  f"[![Total Downloads]({downloads_badge})](https://zenodo.org/communities/{community_id})\n"
+                  f"[![Total Records]({records_badge})](https://zenodo.org/communities/{community_id})\n\n"
+                  f"**Records with statistics:** {stats['records_with_stats']} / {stats['total_records']}\n"
+              )
               return markdown
 
           community_id = 'isrl'
