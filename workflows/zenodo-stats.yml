@@ -1,0 +1,166 @@
+name: Update Zenodo Statistics
+
+on:
+  schedule:
+    # Run every 24 hours at 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Fetch Zenodo statistics and update README
+        run: |
+          python << 'EOF'
+          import requests
+          import json
+          from urllib.parse import quote
+          from datetime import datetime
+          import os
+
+          def fetch_community_records(community_id, max_records=10000):
+              base_url = "https://zenodo.org/api/records"
+              all_records = []
+              page = 1
+              size = 25
+
+              while True:
+                  params = {
+                      'q': f"communities:{community_id}",
+                      'size': size,
+                      'page': page,
+                      'sort': 'mostrecent'
+                  }
+
+                  try:
+                      response = requests.get(base_url, params=params)
+                      response.raise_for_status()
+
+                      data = response.json()
+                      hits = data.get('hits', {})
+                      records = hits.get('hits', [])
+
+                      if not records:
+                          break
+
+                      all_records.extend(records)
+                      total = hits.get('total', 0)
+
+                      if len(all_records) >= total or len(all_records) >= max_records:
+                          break
+
+                      page += 1
+                  except requests.exceptions.RequestException as e:
+                      print(f"Error: {e}")
+                      break
+
+              return all_records
+
+          def calculate_total_stats(records):
+              total_views = 0
+              total_downloads = 0
+              records_with_stats = 0
+
+              for record in records:
+                  stats = record.get('stats', {})
+                  if stats:
+                      records_with_stats += 1
+                      total_views += stats.get('views', 0)
+                      total_downloads += stats.get('downloads', 0)
+
+              return {
+                  'total_views': total_views,
+                  'total_downloads': total_downloads,
+                  'total_records': len(records),
+                  'records_with_stats': records_with_stats
+              }
+
+          def generate_badge_markdown(stats, community_id):
+              views_formatted = f"{stats['total_views']:,}"
+              downloads_formatted = f"{stats['total_downloads']:,}"
+
+              views_badge = f"https://img.shields.io/badge/Total%20Views-{quote(views_formatted)}-blue?logo=zenodo"
+              downloads_badge = f"https://img.shields.io/badge/Total%20Downloads-{quote(downloads_formatted)}-green?logo=zenodo"
+              records_badge = f"https://img.shields.io/badge/Records-{stats['total_records']}-orange?logo=zenodo"
+
+              markdown = f"""## iSRL Community Statistics
+Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} UTC
+
+[![Total Views]({views_badge})](https://zenodo.org/communities/{community_id})
+[![Total Downloads]({downloads_badge})](https://zenodo.org/communities/{community_id})
+[![Total Records]({records_badge})](https://zenodo.org/communities/{community_id})
+
+**Records with statistics:** {stats['records_with_stats']} / {stats['total_records']}
+"""
+              return markdown
+
+          community_id = 'isrl'
+          records = fetch_community_records(community_id)
+
+          if records:
+              stats = calculate_total_stats(records)
+              badge_markdown = generate_badge_markdown(stats, community_id)
+
+              # Read current README
+              readme_path = 'profile/README.md'
+              current_readme = ""
+              if os.path.exists(readme_path):
+                  with open(readme_path, 'r') as f:
+                      current_readme = f.read()
+
+              # Remove old statistics section if it exists
+              stats_start = current_readme.find("## iSRL Community Statistics")
+              if stats_start != -1:
+                  # Find where this section ends (next ## or end of file)
+                  stats_end = current_readme.find("\n##", stats_start + 1)
+                  if stats_end == -1:
+                      # No section after stats, remove to end
+                      before = current_readme[:stats_start].rstrip()
+                      after = ""
+                  else:
+                      # Section found, keep content after
+                      before = current_readme[:stats_start].rstrip()
+                      after = current_readme[stats_end + 1:]
+              else:
+                  # No existing stats section
+                  before = current_readme
+                  after = ""
+
+              # Build new README with stats at top
+              new_readme = badge_markdown
+              if before:
+                  new_readme += "\n\n" + before
+              if after:
+                  new_readme += "\n" + after
+
+              with open(readme_path, 'w') as f:
+                  f.write(new_readme)
+
+              print("✅ README updated with latest statistics")
+          else:
+              print("❌ No records found")
+          EOF
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add profile/README.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update zenodo community statistics" && git push)
