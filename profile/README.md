@@ -1,3 +1,13 @@
+## iSRL Community Statistics
+Last updated: 2026-05-18 08:35:58 UTC
+
+[![Total Views](https://img.shields.io/badge/Total%20Views-1%2C220-blue?logo=zenodo)](https://zenodo.org/communities/isrl)
+[![Total Downloads](https://img.shields.io/badge/Total%20Downloads-781-green?logo=zenodo)](https://zenodo.org/communities/isrl)
+[![Total Records](https://img.shields.io/badge/Records-9-orange?logo=zenodo)](https://zenodo.org/communities/isrl)
+
+**Records with statistics:** 9 / 9
+
+
 # A computer once declared Maggi healthier than rice.
 
 ## We are an open research lab helping computer understand why the grandma will slap it if it says so and hopefully make it learn Indian Nutrition truth. 
