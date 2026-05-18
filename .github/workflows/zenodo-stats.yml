@@ -98,7 +98,7 @@ jobs:
 
               views_badge = f"https://img.shields.io/badge/Total%20Views-{quote(views_formatted)}-blue?logo=zenodo"
               downloads_badge = f"https://img.shields.io/badge/Total%20Downloads-{quote(downloads_formatted)}-green?logo=zenodo"
-              records_badge = f"https://img.shields.io/badge/Records-{stats['total_record']}-orange?logo=zenodo"
+              records_badge = f"https://img.shields.io/badge/Records-{stats['total_records']}-orange?logo=zenodo"
 
               timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
               markdown = (
