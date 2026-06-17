@@ -62,7 +62,7 @@ Researchers get reproducible data.
 Coordination without convergence. The standard lives in the infrastructure, not 
 at the surface.
 
-**Active sprint** → [Allergen Declaration in India — Rules, Reality, and Gaps](https://github.com/isrl-research/sandbox-research/discussions/4)
+**Active sprint** → [EMF Taxonomy — Relationship Tree Structure for Ingredient Expressions](https://github.com/orgs/isrl-research/discussions/8)
 
 ## Join or Contribute
 
@@ -99,9 +99,10 @@ where you are.
 | Report | Identity, Transformation and Function: The E-M-F Tri-Axial Model | [10.5281/zenodo.18714527](https://doi.org/10.5281/zenodo.18714527) |
 | Data Paper | Justification Companion to the EMF-Scoring Model | [10.5281/zenodo.18713318](https://doi.org/10.5281/zenodo.18713318) |
 | Methods Note | Regulatory Texts and Case Law as Ground Truth in Emerging Domains | [10.5281/zenodo.18741725](https://doi.org/10.5281/zenodo.18741725) |
+| Report | Food Allergens in India: Evidence, Regulation, and the State of Current Knowledge | [10.5281/zenodo.19877561](http://doi.org/10.5281/zenodo.19877561) |
 
 [All outputs on Zenodo →](https://zenodo.org/communities/isrl/records)
-[All Research Logs →](https://isrl-research.github.io/logs/)
+[All Research Logs →](https://isrl.in/pub/)
 
 ---
 
