@@ -6,6 +6,9 @@
 [![Total Downloads](https://img.shields.io/badge/Total%20Downloads-911-green?logo=zenodo)](https://zenodo.org/communities/isrl)
 [![Total Records](https://img.shields.io/badge/Records-9-orange?logo=zenodo)](https://zenodo.org/communities/isrl)
 
+**iSRL is paused, see more here: [Pausing iSRL: Respecting the work, supporters, and oneself.
+](https://www.linkedin.com/pulse/pausing-isrl-respecting-work-supporters-oneself-lalitha-a-r-sibvc/). We are grateful for all the support and contributions. Thank you.**
+
 We are process open, not just outputs.
 
 Not a bug. A feature of how food data works — or doesn't. The system had ingredient lists but no way to know what they actually meant. `Maida` and `refined wheat flour` are the same thing. `Kashmiri chilli` is not just a noisy version of `chilli`. String matching cannot tell the difference. Until a system can, nutrition studies run on shaky ground, compliance checks guess, and a regulator cannot ask a clean question and trust the answer.
