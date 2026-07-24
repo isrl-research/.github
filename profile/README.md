@@ -6,7 +6,7 @@
 **iSRL is paused, see more here: [Pausing iSRL: Respecting the work, supporters, and oneself.
 ](https://www.linkedin.com/pulse/pausing-isrl-respecting-work-supporters-oneself-lalitha-a-r-sibvc/). We are grateful for all the support and contributions. Thank you.**
 
-[![Total Views](https://img.shields.io/badge/Total%20Views-1%2C562-blue?logo=zenodo)](https://zenodo.org/communities/isrl)
+[![Total Views](https://img.shields.io/badge/Total%20Views-1%2C563-blue?logo=zenodo)](https://zenodo.org/communities/isrl)
 [![Total Downloads](https://img.shields.io/badge/Total%20Downloads-914-green?logo=zenodo)](https://zenodo.org/communities/isrl)
 [![Total Records](https://img.shields.io/badge/Records-9-orange?logo=zenodo)](https://zenodo.org/communities/isrl)
 
