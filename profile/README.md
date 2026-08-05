@@ -3,8 +3,8 @@
 ## We are an open research lab helping computer understand why the grandma will slap it if it says so and hopefully make it learn Indian Nutrition truth.
 
 
-**iSRL is paused, see more here: [Pausing iSRL: Respecting the work, supporters, and oneself.
-](https://www.linkedin.com/pulse/pausing-isrl-respecting-work-supporters-oneself-lalitha-a-r-sibvc/). We are grateful for all the support and contributions. Thank you.**
+> [!IMPORTANT]
+> **iSRL is paused, see more here: [Pausing iSRL: Respecting the work, supporters, and oneself.](https://www.linkedin.com/pulse/pausing-isrl-respecting-work-supporters-oneself-lalitha-a-r-sibvc/). We are grateful for all the support and contributions. Thank you.**
 
 [![Total Views](https://img.shields.io/badge/Total%20Views-1%2C621-blue?logo=zenodo)](https://zenodo.org/communities/isrl)
 [![Total Downloads](https://img.shields.io/badge/Total%20Downloads-921-green?logo=zenodo)](https://zenodo.org/communities/isrl)
