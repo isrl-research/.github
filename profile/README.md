@@ -6,8 +6,8 @@
 > [!IMPORTANT]
 > **iSRL is paused, see more here: [Pausing iSRL: Respecting the work, supporters, and oneself.](https://isrl.in/pausing-isrl-respecting-the-work-supporters-and-oneself/). We are grateful for all the support and contributions. Thank you.**
 
-[![Total Views](https://img.shields.io/badge/Total%20Views-2%2C041-blue?logo=zenodo)](https://zenodo.org/communities/isrl)
-[![Total Downloads](https://img.shields.io/badge/Total%20Downloads-1%2C006-green?logo=zenodo)](https://zenodo.org/communities/isrl)
+[![Total Views](https://img.shields.io/badge/Total%20Views-2%2C046-blue?logo=zenodo)](https://zenodo.org/communities/isrl)
+[![Total Downloads](https://img.shields.io/badge/Total%20Downloads-1%2C007-green?logo=zenodo)](https://zenodo.org/communities/isrl)
 [![Total Records](https://img.shields.io/badge/Records-9-orange?logo=zenodo)](https://zenodo.org/communities/isrl)
 
 We are process open, not just outputs.
